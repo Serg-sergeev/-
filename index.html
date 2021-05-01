@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script>
+        function openBlok(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+        function closeBlok(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+        function activeBlok(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+        function cardBlokOpen(id) {
+            document.getElementById(id).style.display = 'flex';
+        }
+        function cardBlokClose(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
 </head>
 
 <body>
@@ -20,8 +37,10 @@
             </div>
             <div>
                 <a href="#" class="nav-container-link"><img src="images/nav-menu.svg" alt="menu"></a>
-                <a href="#" class="nav-container-link"><img src="images/nav-profile.svg" alt="profile"></a>
-                <a href="#" class="nav-container-link"><img src="images/nav-shoping-card.svg" alt="shopping card"></a>
+                <a href="#" class="nav-container-link nav-container-none"><img src="images/nav-profile.svg"
+                        alt="profile"></a>
+                <a href="#" class="nav-container-link nav-container-none"><img src="images/nav-shoping-card.svg"
+                        alt="shopping card"></a>
             </div>
         </div>
     </div>
@@ -32,94 +51,193 @@
         </div>
         <div class="haeder-box">
             <div class="haeder-box-logo"></div>
-            <p class="haeder-box-text"><span id="haeder-box-text-main">THE BRAND</span><br> OF LUXERIOUS <span id="haeder-box-text-focus">FASHION</span></p>
+            <p class="haeder-box-text"><span id="haeder-box-text-main">THE BRAND</span><br> OF LUXERIOUS <span
+                    id="haeder-box-text-focus">FASHION</span></p>
         </div>
     </div>
 
     <div class="mine site-size">
-        <div class="mine-box-top">
-            <div class="mine-box-top-link">
-                <a href="#" target="blank"><img class="mine-box-top-img" src="images/mine-top-women.png" alt="women">
-                </a>
-                <div>
-                    <a href="#"><p>30% OFF <br><span>FOR WOMEN</span></p></a>
+        <header>
+            <div class="mine-box-top">
+                <div class="mine-box-top-link">
+                    <a href="#" target="blank"><img class="mine-box-top-img" src="images/mine-top-women.png" alt="women">
+                    </a>
+                    <div>
+                        <a href="#">
+                            <p>30% OFF <br><span>FOR WOMEN</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="mine-box-top-link">
+                    <a href="#" target="blank"><img class="mine-box-top-img" src="images/mine-top-men.png" alt="men"></a>
+                    <div>
+                        <a href="#">
+                            <p>HOT DEAL <br><span>FOR MEN</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="mine-box-top-link">
+                    <a href="#" target="blank"><img class="mine-box-top-img" src="images/mine-top-kids.png" alt="kids"></a>
+                    <div>
+                        <a href="#">
+                            <p>NEW ARRIVALS <br><span>FOR KIDS</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="mine-box-top-link">
+                    <a href="#" target="blank"><img class="mine-box-top-img" src="images/mine-top-accesories.png"
+                            alt="accesories"></a>
+                    <div>
+                        <a href="#">
+                            <p>LUXIROUS & TRENDY <br><span>ACCESORIES</span></p>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="mine-box-top-link">
-                <a href="#" target="blank"><img class="mine-box-top-img" src="images/mine-top-men.png" alt="men"></a>
-                <div>
-                    <a href="#"><p>HOT DEAL <br><span>FOR MEN</span></p></a>
-                </div>
-            </div>
-            <div class="mine-box-top-link">
-                <a href="#" target="blank"><img class="mine-box-top-img" src="images/mine-top-kids.png" alt="kids"></a>
-                <div>
-                    <a href="#"><p>NEW ARRIVALS <br><span>FOR KIDS</span></p></a>
-                </div>
-            </div>
-            <div class="mine-box-top-link">
-                <a href="#" target="blank"><img class="mine-box-top-img" src="images/mine-top-accesories.png" alt="accesories"></a>
-                <div>
-                    <a href="#"><p>LUXIROUS & TRENDY <br><span>ACCESORIES</span></p></a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="mine-box-center">
-            <h3>Fetured Items</h3>
-            <p>Shop for items based on what we featured in this week</p>
-            <div class="mine-box-center-product">
-                <div>
-                    <a href="#">
+        </header>
+
+        <main class="mine-box-center">
+            <header class="mine-box-center-header">
+                <h3>Fetured Items</h3>
+                <p>Shop for items based on what we featured in this week</p>
+            </header>
+            
+            <main class="mine-box-card">
+
+                <section class="mine-box-card-container">
+                    <div onmouseout="cardBlokClose('Card-1')" onmouseover="cardBlokOpen('Card-1')"
+                        class="position-relative">
                         <img src="images/mine-product-1.png" alt="product-1">
-                        <h4>ELLERY X M'O CAPSULE</h4>
-                        <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi</p>
-                        <p>$52.00</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
+                        <div id="Card-1" class="Add_to_Card">
+                            <div>
+                                <div>
+                                    <a href="#">
+                                        <img src="images/basket.svg" alt="basket">
+                                    </a>
+                                    <a href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>ELLERY X M'O CAPSULE</h2>
+                    <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                        teams up with Moda Operandi.</p>
+                    <p>$52.00</p>
+                </section>
+
+                <section class="mine-box-card-container">
+                    <div onmouseout="cardBlokClose('Card-2')" onmouseover="cardBlokOpen('Card-2')"
+                        class="position-relative">
                         <img src="images/mine-product-2.png" alt="product-2">
-                        <h4>ELLERY X M'O CAPSULE</h4>
-                        <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi</p>
-                        <p>$52.00</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
+                        <div id="Card-2" class="Add_to_Card">
+                            <div>
+                                <div>
+                                    <a href="#">
+                                        <img src="images/basket.svg" alt="basket">
+                                    </a>
+                                    <a href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>ELLERY X M'O CAPSULE</h2>
+                    <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                        teams up with Moda Operandi.</p>
+                    <p>$52.00</p>
+                </section>
+
+                <section class="mine-box-card-container">
+                    <div onmouseout="cardBlokClose('Card-3')" onmouseover="cardBlokOpen('Card-3')"
+                        class="position-relative">
                         <img src="images/mine-product-3.png" alt="product-3">
-                        <h4>ELLERY X M'O CAPSULE</h4>
-                        <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi</p>
-                        <p>$52.00</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
+                        <div id="Card-3" class="Add_to_Card">
+                            <div>
+                                <div>
+                                    <a href="#">
+                                        <img src="images/basket.svg" alt="basket">
+                                    </a>
+                                    <a href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>ELLERY X M'O CAPSULE</h2>
+                    <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                        teams
+                        up with Moda Operandi.</p>
+                    <p>$52.00</p>
+                </section>
+
+                <section class="mine-box-card-container">
+                    <div onmouseout="cardBlokClose('Card-4')" onmouseover="cardBlokOpen('Card-4')"
+                        class="position-relative">
                         <img src="images/mine-product-4.png" alt="product-4">
-                        <h4>ELLERY X M'O CAPSULE</h4>
-                        <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi</p>
-                        <p>$52.00</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
+                        <div id="Card-4" class="Add_to_Card">
+                            <div>
+                                <div>
+                                    <a href="#">
+                                        <img src="images/basket.svg" alt="basket">
+                                    </a>
+                                    <a href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>ELLERY X M'O CAPSULE</h2>
+                    <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                        teams
+                        up with Moda Operandi.</p>
+                    <p>$52.00</p>
+                </section>
+
+                <section class="mine-box-card-container">
+                    <div onmouseout="cardBlokClose('Card-5')" onmouseover="cardBlokOpen('Card-5')"
+                        class="position-relative">
                         <img src="images/mine-product-5.png" alt="product-5">
-                        <h4>ELLERY X M'O CAPSULE</h4>
-                        <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi</p>
-                        <p>$52.00</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
+                        <div id="Card-5" class="Add_to_Card">
+                            <div>
+                                <div>
+                                    <a href="#">
+                                        <img src="images/basket.svg" alt="basket">
+                                    </a>
+                                    <a href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>ELLERY X M'O CAPSULE</h2>
+                    <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                        teams
+                        up with Moda Operandi.</p>
+                    <p>$52.00</p>
+                </section>
+
+                <section class="mine-box-card-container">
+                    <div onmouseout="cardBlokClose('Card-6')" onmouseover="cardBlokOpen('Card-6')"
+                        class="position-relative">
                         <img src="images/mine-product-6.png" alt="product-6">
-                        <h4>ELLERY X M'O CAPSULE</h4>
-                        <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi</p>
-                        <p>$52.00</p>
-                    </a>
-                </div>
-            </div>
-            <a id="mine-box-center-link-all-product" href="#">Browse All Product</a>
-        </div>
+                        <div id="Card-6" class="Add_to_Card">
+                            <div>
+                                <div>
+                                    <a href="#">
+                                        <img src="images/basket.svg" alt="basket">
+                                    </a>
+                                    <a href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>ELLERY X M'O CAPSULE</h2>
+                    <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                        teams
+                        up with Moda Operandi.</p>
+                    <p>$52.00</p>
+                </section>
+
+            </main>
+
+            <a id="mine-box-center-link-all-product" href="Catalog.html">Browse All Product</a>
+        </main>
     </div>
 
     <div class="footer site-size">
@@ -127,7 +245,8 @@
             <div>
                 <img src="images/footer-top-delivery.svg" alt="delivery">
                 <h3>Free Delivery</h3>
-                <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                </p>
             </div>
             <div>
                 <img src="images/footer-top-sale.svg" alt="sale">
@@ -149,7 +268,7 @@
                 <div id="footer-mine-subscribe">
                     <h3><b>SUBSCRIBE</b><br><span>FOR OUR NEWLETTER AND PROMOTION</span></h3>
                     <div>
-                        <input id="" type="email" placeholder="Enter Your Email">
+                        <input id="Subscribe" type="email" placeholder="Enter Your Email">
                         <button>Subscribe</button>
                     </div>
                 </div>
